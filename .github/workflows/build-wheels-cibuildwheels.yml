@@ -2,10 +2,10 @@ name: Mercury wheels Build and Publish cibuildwheels
 
 on:
   workflow_dispatch:
-#  push:
-#    branches:
-#      - main
-#      - feature/python-packages-workflow
+  push:
+    branches:
+      - main
+      - feature/python-packages-workflow
 
 jobs:
   build-mercury-wheels:
@@ -32,7 +32,7 @@ jobs:
         if: runner.os == 'Linux'
         uses: docker/setup-qemu-action@v3
         with:
-          platforms: all
+          platforms: arm64
 
       - name: Install pip packages
         run: python -m pip install cython cibuildwheel==2.20.0
