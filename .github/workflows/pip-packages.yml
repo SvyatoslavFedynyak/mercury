@@ -35,4 +35,5 @@ jobs:
         run: ./configure && make && cd src/cython/
 
       - name: Build wheels
+        working-directory: ./src/cython/
         run: python -m cibuildwheel --output-dir wheelhouse
