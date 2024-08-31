@@ -1,4 +1,4 @@
-name: Mercury wheels Build and Publish
+name: Mercury wheels Build and Publish cibuildwheels
 
 on:
   workflow_dispatch:
