@@ -55,7 +55,6 @@ sources = [
     "../libmerc/smb2.cc",
     "../libmerc/config_generator.cc",
     "../libmerc/bencode.cc",
-    "../libmerc/dns.h"
 ]
 
 
