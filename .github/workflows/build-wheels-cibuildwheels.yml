@@ -41,7 +41,6 @@ jobs:
         run: ./configure && make
 
       - name: Build wheels
-        working-directory: ./src/cython/
         run: python -m cibuildwheel --output-dir src/cython/wheelhouse
         env:
           CIBW_ARCHS_LINUX: x86_64 aarch64 
