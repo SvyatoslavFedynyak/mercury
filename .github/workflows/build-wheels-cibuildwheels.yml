@@ -44,6 +44,6 @@ jobs:
         run: python -m cibuildwheel --output-dir src/cython/wheelhouse
         env:
           CIBW_ARCHS_LINUX: x86_64 aarch64 
-          CIBW_BUILD=: "cp36-*"
+          CIBW_BUILD=: "cp39-*"
           CIBW_SKIP: "*-musllinux_*"
           CIBW_BEFORE_ALL: yum install -y openssl-devel make zlib-devel || apt-get install -y zlib1g-dev libssl-dev make || apk add zlib1g-dev libssl-dev make
