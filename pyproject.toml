@@ -3,3 +3,6 @@ requires = [
     "setuptools>=42",
     "Cython",
 ]
+
+[tool.cibuildwheel]
+environment = "CC='g++' CXX='g++'"

@@ -39,22 +39,22 @@ else:
 
 sources = [
     "mercury.pyx",
-    "../libmerc/asn1/oid.cc",
-    "../libmerc/dns.cc",
-    "../libmerc/utils.cc",
-    "../libmerc/analysis.cc",
-    "../libmerc/libmerc.cc",
-    "../libmerc/addr.cc",
-    "../libmerc/wireguard.cc",
-    "../libmerc/ssh.cc",
-    "../libmerc/match.cc",
-    "../libmerc/http.cc",
-    "../libmerc/pkt_proc.cc",
-    "../libmerc/tls.cc",
-    "../libmerc/asn1.cc",
-    "../libmerc/smb2.cc",
-    "../libmerc/config_generator.cc",
-    "../libmerc/bencode.cc",
+    "src/libmerc/asn1/oid.cc",
+    "src/libmerc/dns.cc",
+    "src/libmerc/utils.cc",
+    "src/libmerc/analysis.cc",
+    "src/libmerc/libmerc.cc",
+    "src/libmerc/addr.cc",
+    "src/libmerc/wireguard.cc",
+    "src/libmerc/ssh.cc",
+    "src/libmerc/match.cc",
+    "src/libmerc/http.cc",
+    "src/libmerc/pkt_proc.cc",
+    "src/libmerc/tls.cc",
+    "src/libmerc/asn1.cc",
+    "src/libmerc/smb2.cc",
+    "src/libmerc/config_generator.cc",
+    "src/libmerc/bencode.cc",
 ]
 
 
@@ -91,7 +91,7 @@ setup(
         Extension(
             "mercury",
             sources=sources,
-            include_dirs=["../libmerc"],
+            include_dirs=["src/libmerc"],
             language="c++",
             extra_compile_args=[
                 "-std=c++17",
