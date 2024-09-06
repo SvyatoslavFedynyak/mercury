@@ -101,7 +101,7 @@ setup(
             + additional_flags,
             extra_link_args=["-std=c++17", "-lz"] + additional_flags,
             libraries=["crypto"],
-            runtime_library_dirs=["../"],
+            runtime_library_dirs=["src/"],
         )
     ],
     cmdclass={"build_ext": build_ext},
