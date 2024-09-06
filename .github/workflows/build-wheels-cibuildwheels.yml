@@ -44,6 +44,7 @@ jobs:
         uses: pypa/cibuildwheel@v2.20.0
         env:
           CIBW_ARCHS_LINUX: aarch64 x86_64
+          CIBW_MANYLINUX_X86_64_IMAGE: manylinux_2_28
           #CIBW_BUILD=: "cp*-manylinux_*"
           CIBW_SKIP: "*-musllinux_* pp37* cp* pp38*"
           CIBW_BEFORE_ALL: yum install -y openssl-devel make zlib-devel || apt-get install -y zlib1g-dev libssl-dev make || apk add zlib1g-dev libssl-dev make
