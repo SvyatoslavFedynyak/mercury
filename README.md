@@ -12,18 +12,16 @@ Mercury produces fingerprint strings for TLS, DTLS, SSH, HTTP, TCP, and other pr
 
 # Contents
 
-- [Mercury: network metadata capture and analysis](#mercury-network-metadata-capture-and-analysis)
-  - [Overview](#overview)
-- [Contents](#contents)
-  - [Building and installing mercury](#building-and-installing-mercury)
-    - [Installation](#installation)
-    - [Compile-time options](#compile-time-options)
-  - [Running mercury](#running-mercury)
-    - [SYSTEM](#system)
-    - [EXAMPLES](#examples)
-  - [Ethics](#ethics)
-  - [Credits](#credits)
-  - [Acknowledgments](#acknowledgments)
+* [Building and installing mercury](#building-and-installing-mercury)
+   * [Installation](#installation)
+   * [Compile-time options](#compile-time-options)
+* [Running mercury](#running-mercury)
+  * [Details](#details)
+  * [System](#system)
+  * [Examples](#examples)
+* [Ethics](#ethics)
+* [Credits](#credits)
+* [Acknowledgements](#acknowledgments)
 
 
 ## Building and installing mercury
