@@ -34,12 +34,12 @@ jobs:
         run: copy src/libmerc/xsimd/include/xsimd/* src/libmerc/xsimd/
 
       - name: Build Mercury
-        run: | 
-          cd src/libmerc && \
-          cmake -DCMAKE_BUILD_TYPE=Debug -DLIBMERC_ONLY=TRUE -B build-debug && \
-          cmake --build build-debug --config Debug --parallel 1 && \
-          cmake -DCMAKE_BUILD_TYPE=Release -DLIBMERC_ONLY=TRUE -B build-release && \
-          cmake --build build-release --config Release --parallel 1 && \
+        run: > 
+          cd src/libmerc &&
+          cmake -DCMAKE_BUILD_TYPE=Debug -DLIBMERC_ONLY=TRUE -B build-debug &&
+          cmake --build build-debug --config Debug --parallel 1 &&
+          cmake -DCMAKE_BUILD_TYPE=Release -DLIBMERC_ONLY=TRUE -B build-release &&
+          cmake --build build-release --config Release --parallel 1 &&
           copy ./ ../../
 
       - name: Build wheels
