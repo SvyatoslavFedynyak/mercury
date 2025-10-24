@@ -24,9 +24,8 @@ jobs:
         with:
           fetch-depth: 1
 
-      - uses: crazy-max/ghaction-chocolatey@v3
-        with:
-          args: install zlib
+      - name: Install pip packages
+        run: vcpkg install zlib
 
       - name: Install pip packages
         run: python -m pip install cython cibuildwheel==2.20.0
