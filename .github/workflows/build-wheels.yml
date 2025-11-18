@@ -56,7 +56,7 @@ jobs:
         run: ./configure && make && cp -r src/cython/* ./
 
       - name: Build wheels
-        uses: pypa/cibuildwheel@v2.20.0
+        uses: pypa/cibuildwheel@v3.3.0
         env:
           CIBW_ARCHS_LINUX: aarch64 x86_64
           CIBW_ARCHS_MACOS: arm64
