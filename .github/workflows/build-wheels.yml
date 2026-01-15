@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - jan-26-fix-pipeline
 
 jobs:
   build-mercury-wheels:
@@ -17,7 +17,7 @@ jobs:
       id-token: write
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-latest]
 
     steps:
       - uses: actions/checkout@v4
@@ -61,6 +61,7 @@ jobs:
           CIBW_ARCHS_LINUX: aarch64 x86_64
           CIBW_ARCHS_MACOS: arm64
           CIBW_SKIP: "*-musllinux_* pp* cp38* cp37* cp36*"
+          CIBW_BUILD: "cp314t-manylinux_x86_64"
           CIBW_BEFORE_ALL_LINUX: yum install -y openssl-devel make zlib-devel || apt-get install -y zlib1g-dev libssl-dev make || apk add zlib1g-dev libssl-dev make
           CIBW_BEFORE_ALL_MACOS: brew install openssl zlib
           CIBW_TEST_COMMAND: cd {project} && python mercury_python_test.py
